@@ -4169,7 +4169,7 @@ section,
 
 /* -----------------------NV Custom CSS ----------------------*/
   .hero {
-      background: url('https://btdt-eta.vercel.app/assets/img/hero-banner.png') no-repeat bottom center/cover;
+      background: url('../img/hero-banner.png') no-repeat bottom center/cover;
       min-height: 100vh;
       display: flex;
       flex-wrap: wrap;
@@ -4339,7 +4339,7 @@ section,
       align-items: center;
       justify-content: center;
       padding: 60px 30px 0;
-      background: url('https://btdt-eta.vercel.app/assets/img/cta-bg-v2.png') no-repeat center;
+      background: url('../img/cta-bg-v2.png') no-repeat center;
       background-size: cover;
       color: white;
       position: relative;
