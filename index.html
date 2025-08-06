@@ -42,6 +42,7 @@
 
     <script defer src="https://cloud.umami.is/script.js" data-website-id="ada9eb40-fd47-4529-b6f9-96478f679535"></script>
 
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17371943672"></script>
     <script>
@@ -53,25 +54,40 @@
     </script>
 
 
-<!-- Google tag (gtag.js) --> 
-   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17371943672"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-17371943672'); </script>
-  
-  <script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
+    <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-17371943672/1Xm6CPHm6oAbEPily9tA',
+          'value': 1.0,
+          'currency': 'USD',
+          'event_callback': callback
+      });
+      return false;
     }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-17371943672/nWvVCKW42oAbEPily9tA',
-      'value': 1.0,
-      'currency': 'USD',
-      'event_callback': callback
-  });
-  return false;
-}
-</script>
+    </script>
+
+
+    <script>
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof(url) != 'undefined') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-17371943672/nWvVCKW42oAbEPily9tA',
+            'value': 1.0,
+            'currency': 'USD',
+            'event_callback': callback
+        });
+        return false;
+      }
+      </script>
 
 
   <style>
