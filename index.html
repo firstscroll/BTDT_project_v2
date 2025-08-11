@@ -680,6 +680,7 @@
   <script src="assets/js/main.js"></script>
 
 
+
 <script>
   window.addEventListener("load", function () {
     const form = document.getElementById('my-form');
@@ -700,6 +701,18 @@
         return;
       }
 
+      // --- Check "Best time for us to Call" ---
+      if (!form.querySelector('input[name="calltime"]:checked')) {
+        alert("Please select your preferred time for us to call.");
+        return;
+      }
+
+      // --- Check "Dumpster Size" ---
+      if (!form.querySelector('input[name="dumpster"]:checked')) {
+        alert("Please select a dumpster size.");
+        return;
+      }
+
       // --- Show Loader & Disable Submit ---
       overlay.style.display = 'flex';
       submitButton.disabled = true;
@@ -712,10 +725,10 @@
         body: data,
       })
         .then(() => {
-          // ✅ Redirect to thank you page after a short delay (optional)
+          // ✅ Redirect to thank you page after a short delay
           setTimeout(() => {
             window.location.href = 'thanks.html';
-          }, 500); // Adjust if needed
+          }, 500);
         })
         .catch(() => {
           overlay.innerHTML = `<div style="text-align:center;"><p>There was an error. Please try again later.</p></div>`;
