@@ -4182,7 +4182,7 @@ section,
     @media only screen and (min-width: 900px){
       .hero-left {
         position: relative;
-        bottom: 14em;
+        bottom: 4em;
         left: 14em;
       max-width: 500px;
       color: white;
