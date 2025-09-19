@@ -742,20 +742,8 @@
         return;
       }
 
-      // --- Check "Best time for us to Call" ---
-      if (!form.querySelector('input[name="calltime"]:checked')) {
-        alert("Please select your preferred time for us to call.");
-        return;
-      }
-
-      // --- Check "Dumpster Size" ---
-      if (!form.querySelector('input[name="dumpster"]:checked')) {
-        alert("Please select a dumpster size.");
-        return;
-      }
-
       // --- Show Loader & Disable Submit ---
-      overlay.style.display = 'flex';
+      if (overlay) overlay.style.display = 'flex';
       submitButton.disabled = true;
 
       const data = new FormData(form);
@@ -772,7 +760,10 @@
           }, 500);
         })
         .catch(() => {
-          overlay.innerHTML = `<div style="text-align:center;"><p>There was an error. Please try again later.</p></div>`;
+          if (overlay) {
+            overlay.innerHTML = `<div style="text-align:center;"><p>There was an error. Please try again later.</p></div>`;
+          }
+          submitButton.disabled = false;
         });
     });
   });
